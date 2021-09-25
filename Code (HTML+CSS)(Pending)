@@ -8,14 +8,18 @@ Code of the Project
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naman's fitness club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="CSS/style.css">
     <style>
         /* reset css */
         body {
+            /* box-sizing: border-box; */
+            font-family: 'Baloo Bhaina 2', cursive;
             margin: 0px;
             padding: 0px;
             background: url('img/pexels-photo.jpg');
-            height: 875px;
+            height: 651px;
             background-repeat: no-repeat;
             color: white;
             background-size: 1366px;
@@ -23,25 +27,29 @@ Code of the Project
 
         .left {
             /* border: 2px solid yellow; */
+            /* box-sizing: border-box; */
             display: inline-block;
             position: absolute;
             left: 40px;
             top: 20px;
-            
+            font-size: 15px;
+
         }
 
         .mid {
-            border: 2px solid green;
+            /* border: 2px solid green; */
+            /* box-sizing: border-box; */
             display: block;
-            width: 686px;
+            width: 632px;
             margin: 20px auto;
             /* position: absolute;
-            left: auto;
-            top: 20px; */
+            /* left: auto; */
+            /* top: 20px; */
         }
 
         .right {
-            border: 2px solid red;
+            /* border: 2px solid red; */
+            /* box-sizing: border-box; */
             display: inline-block;
             position: absolute;
             right: 20px;
@@ -51,6 +59,13 @@ Code of the Project
 
         .navbar {
             display: inline-block;
+
+        }
+
+        .left div {
+            text-align: center;
+            line-height: 17px;
+            font-size: 17px;
         }
 
         .navbar li {
@@ -59,18 +74,81 @@ Code of the Project
         }
 
         .navbar li a {
+            border-radius: 8px;
+            background-color: #adad99;
             color: white;
             text-decoration: none;
-            padding: 34px;
+            padding: 10px 17px;
+            border: 2px solid #c0af95;
         }
-        .navbar li a:hover, .navbar li a.active {
+
+        .navbar li a:hover,
+        .navbar li a.active {
             text-decoration: solid;
             text-decoration: underline;
-            color: aqua;
+            color: rgb(50, 59, 34);
+            background-color: rgb(209, 201, 159);
         }
-        .left, img{
-          width: 150px;
-          height: 75px;
+
+        .left,
+        img {
+            width: 102px;
+            height: 86px;
+        }
+
+        .btn {
+            font-family: 'Baloo Bhaina 2', cursive;
+            margin: 3px 4px;
+            padding: 4px 4px;
+            background-color: rgb(51 48 48);
+            color: white;
+            font-size: 14px;
+            border: 2px solid grey;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 72px;
+        }
+
+        .container {
+            border: 2px solid white;
+            margin: 68px 895px;
+            padding: 24px 27px;
+            width: 29%;
+            border-radius: 23px;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #251a1a;
+            font-size: 22px;
+        }
+
+        .form-group input {
+            font-family: 'Baloo Bhaina 2', cursive;
+            border-radius: 8px;
+            margin: 0px 55px;
+            text-align: left;
+            display: block;
+            padding: 5px 7px;
+            width: 203px;
+            border: 2px solid black;
+        }
+
+        button {
+            cursor: pointer;
+            margin: 5px 56px;
+            border-radius: 4px;
+            width: 222px;
+
+        }
+
+        button:hover {
+            background-color: #35322f;
+        }
+
+        label {
+            color: rgb(9 12 12);
+            margin: 0px 56px;
         }
     </style>
 </head>
@@ -79,8 +157,8 @@ Code of the Project
     <header class="header">
         <div class="left">
             <!-- for logo -->
-          <img src="img/photo.jpg" alt="">
-           Naman's Fitness Club
+            <img src="img/606515.png" alt="">
+            <div style="text-align: center;">Naman's Fitness Club</div>
 
         </div>
         <div class="mid">
@@ -95,7 +173,38 @@ Code of the Project
         </div>
         <div class="right">
             <!-- for buttons -->
-            I am right
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+        </div>
+        <div class="container">
+            <h1>Join The Best Gym Of Delhi Now</h1>
+            <form action="noaction.php">
+                <label for="first name">First Name</label>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your First Name">
+                </div>
+                <label for="last name">Last Name</label>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Last Name">
+                </div>
+                <label for="address">Address</label>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Address">
+                </div>
+                <label for="locality">Locality</label>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Locality">
+                </div>
+                <label for="Phone Number">Phone Number </label>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Phone Number">
+                </div>
+                <label for="Email">Email</label>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Email">
+                </div>
+                <button>Submit</button>
+            </form>
         </div>
     </header>
 </body>
